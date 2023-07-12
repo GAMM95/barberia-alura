@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/barberia-alura/static/css/main.9311845a.css",
+    "main.js": "/barberia-alura/static/js/main.e212afd6.js",
+    "static/media/img2.jpg": "/barberia-alura/static/media/img2.dd2b697cbf6cf73b992a.jpg",
+    "static/media/img1.jpg": "/barberia-alura/static/media/img1.79c3166e09bfbbdef302.jpg",
+    "static/media/utensilios.jpg": "/barberia-alura/static/media/utensilios.028e33ec5293062072e7.jpg",
+    "static/media/cabello+barba.jpg": "/barberia-alura/static/media/cabello+barba.7b1a256add39c8817807.jpg",
+    "static/media/diferencial.jpg": "/barberia-alura/static/media/diferencial.e54b2114d5140d302c8d.jpg",
+    "static/media/cabello.jpg": "/barberia-alura/static/media/cabello.35dfd55525786e11fbc7.jpg",
+    "static/media/barba.jpg": "/barberia-alura/static/media/barba.cbb86618992f7bf26927.jpg",
+    "index.html": "/barberia-alura/index.html",
+    "main.9311845a.css.map": "/barberia-alura/static/css/main.9311845a.css.map",
+    "main.e212afd6.js.map": "/barberia-alura/static/js/main.e212afd6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9311845a.css",
+    "static/js/main.e212afd6.js"
+  ]
+}
