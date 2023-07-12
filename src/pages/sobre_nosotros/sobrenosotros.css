@@ -1,0 +1,46 @@
+.sobre-nosotros {
+  padding-bottom: 0;
+}
+
+.sobre-nosotros__grid {
+  /*columnas de la cuadricula*/
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  /*espacio entre columnas*/
+  column-gap: 3rem;
+}
+
+/*fondo de sombra en imagen*/
+.sobre-nosotros__img-wrapper {
+  position: relative;
+  padding-left: 0.125rem;
+
+}
+
+/*fondo de sombra en imagen*/
+.sobre-nosotros__img-wrapper::before {
+  content: '';
+  position: absolute;
+  bottom: -1.125rem;
+  right: +1.125rem;
+  background-color: var(--first-color);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sobre-nosotros__detalles {
+  /* margin-top + margin-bottom */
+  margin-block: 1.25rem 2.25rem;
+}
+
+.sobre-nosotros__detalles-descripcion {
+  display: flex;
+  align-items: center;
+}
+
+.sobre-nosotros__detalles,
+.sobre-nosotros__detalles-descripcion {
+  /* espacio entre elementos */
+  gap: 0.625rem;
+}

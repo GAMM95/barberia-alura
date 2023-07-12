@@ -1,0 +1,196 @@
+/*============= GOOGLE FONTS =============*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=PT+Sans&display=swap');
+
+/*============= VARIABLES CSS =============*/
+:root {
+  /*tamaño de cabecera */
+  --header-height: 5rem;
+
+  /*______ Colores ______*/
+  /* --first-color: hsl(27, 34%, 59%); */
+  --first-color: hsl(44, 22%, 48%);
+  --second-color: hsl(27, 62%, 82%);
+  --first-color-light: hsl(42, 13%, 34%);
+
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 67%);
+  --bg-color: hsl(0, 0%, 8%);
+  --input-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 6%);
+  --footer-color: hsl(0, 0%, 2%);
+  --hsla: hsl(0, 0%, 0%, 0.75);
+
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --biggest-font-size: 4.125rem;
+  --bigger-font-size: 3.125rem;
+  --big-font-size: 2.5rem;
+  --h1-font-size: 1.875rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --largest-font-size: 1.375rem;
+  --larger-font-size: 1.25rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  /*========== Font weight ==========*/
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /*______ Radio de borde ______*/
+  --radius: 0.5rem;
+
+  /*______ Transicion ______*/
+  --transition: ease-in-out;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--second-font);
+  color: var(--title-color);
+  font-weight: var(--weight-400);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*============= CLASES CSS REUSABLES =============*/
+.container {
+  max-width: 1200px;
+  /* margenes de inicio y final*/
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
+
+/* contenedor de cuadriculas
+  display:grid; > divide el area de un contenedor en filas y columnas */
+.grid {
+  display: grid;
+  /*espacios entre los elementos dentro del grid*/
+  gap: 1.5rem;
+}
+
+.btn {
+  /* distribuir los bloques en linea horizontal */
+  display: inline-block;
+  color: var(--title-color);
+  background: var(--first-color);
+  border: 2px solid var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.section {
+  /*Padding-top + padding-bottom*/
+  padding-block: 6.5rem;
+}
+
+.section__titulo {
+  font-size: var(--big-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section__titulo::before {
+  /* agregar contenido dinamico con attr() */
+  content: attr(data-title);
+  /* nueva linea*/
+  display: block;
+  color: var(--first-color);
+  font-family: var(--second-font);
+  font-size: var(--h2-font-size);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+/* titulo izquierda de la seccion sobre nosotros */
+.titulo-izquierda {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.section__subtitulo {
+  margin-bottom: 1rem;
+}

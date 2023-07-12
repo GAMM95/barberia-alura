@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--footer-color);
+  height: 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 15rem;
+}
+
+.footer__logo {
+  align-items: center;
+  margin-block: 1.5rem;
+}
+
+.logo-footer {
+  width: 8%;
+  justify-content: center;
+  text-align: center;
+}
+
+strong{
+  color: var(--second-color);
+}
+
+.footer__copy {
+  padding-bottom:var(--mb-2);
+}

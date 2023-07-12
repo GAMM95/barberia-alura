@@ -1,0 +1,196 @@
+.contacto {
+  padding-bottom: 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacto__grid {
+  /*columnas de la cuadricula*/
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  /*espacio entre columnas*/
+  column-gap: 3rem;
+}
+
+/* PANEL DERECHO */
+.contacto-pregunta {
+  color: var(--title-color);
+  padding-block: var(--mb-1);
+}
+
+.contacto__info {
+  display: grid;
+  row-gap: var(--mb-1);
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto__modo {
+  border-color: none;
+}
+
+/* Radio buttons */
+.radio-button {
+  display: none;
+  accent-color: var(--first-color);
+  cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+.label-radio {
+  position: relative;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  border: 2px solid var(--first-color);
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label-radio:before {
+  content: " ";
+  height: 1rem;
+  width: 1rem;
+  border: 0.25rem solid var(--first-color);
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+.radio-button:checked+.label-radio {
+  background-color: var(--first-color);
+  color: var(--title-color);
+}
+
+.radio-button:checked+.label-radio::before {
+  height: 1rem;
+  width: 1rem;
+  border: 0.275rem solid var(--title-color);
+  background-color: var(--first-color);
+}
+
+/* Tabla de horarios */
+.contacto-tabla {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--mb-1);
+}
+
+.tabla-horario {
+  display: table;
+  color: var(--title-color);
+  border: var(--first-color);
+  height: 1rem;
+}
+
+.tabla-cabecera {
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--bg-color);
+}
+
+td,
+th {
+  border: 1px solid var(--second-color);
+  padding: 0.5rem 0.75rem;
+ 
+}
+
+/* ComboBox de Turnos */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #5c6664;
+  flex: 1;
+  padding: 0 .5em;
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 1em;
+
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: var(--second-color);
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #2b2e2e;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+}
+
+/* PANEL DEL FORMULARIO */
+.contact__form-div {
+  position: relative;
+  /*posicion relativa*/
+  margin-bottom: var(--mb-2);
+  height: 4rem;
+  display: flex;
+}
+
+.contact__form-input {
+  position: absolute;
+  /*posicion absoluta respecto al div*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--first-color);
+  /* border: 2px solid rgba(243, 169, 66, 0.847); */
+  background: none;
+  color: var(--input-color);
+  outline: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.contact__form-tag {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: 0.25rem;
+  color: var(--first-color);
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+.contact__form-area {
+  height: 11rem;
+}
+
+.contact__form-area textarea {
+  resize: none;
+}
+
+.contact__form-div-check {
+  margin-bottom: var(--mb-1-5);
+  display: flex;
+}
+
+.contact__form-check {
+  accent-color: var(--first-color);
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  border-radius: 0.5rem;
+}

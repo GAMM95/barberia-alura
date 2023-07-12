@@ -1,0 +1,9 @@
+.mapa {
+  width: 80%;
+}
+
+.mapa iframe {
+  border-radius: var(--radius);
+  box-shadow: rgba(0, 0, 0, 0.3);
+  cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur), default;
+}

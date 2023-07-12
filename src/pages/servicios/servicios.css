@@ -1,0 +1,95 @@
+.servicios {
+  /* mantener estatico el fondo */
+  background: url(../../assets/img1.jpg) center / cover fixed;
+  position: relative;
+
+}
+
+/* oscurecer imagen de fondo
+agregar capa de opacidad */
+.servicios::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hsla);
+}
+
+/* Colocar por delante del fondo opaco */
+.servicios .section__titulo,
+.productos,
+.servicios {
+  position: relative;
+  z-index: 1;
+}
+
+.servicios__grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.productos li {
+  display: inline-block;
+  background: var(--bg-color);
+  text-align: center;
+  width: 90%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px solid var(--first-color-light);
+  border-radius: 10px;
+  transition: 0.5s var(--transition);
+}
+
+.productos li:hover {
+  border-color: var(--first-color);
+  transform: translateY(-0.25rem);
+}
+
+.productos li:active {
+  border-color: var(--second-color);
+}
+
+.productos h2 {
+  font-size: var(--largest-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--first-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.productos li:hover h2 {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.productos li:hover p {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.productos li:hover .producto-precio {
+  font-size: var(--largest-font-size);
+  color: var(--title-color);
+}
+
+.producto-descripcion {
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+}
+
+.producto-precio {
+  font-size: var(--largest-font-size);
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--first-color-light);
+}
+
+.productos img {
+  border-radius: var(--radius);
+  margin-block: var(--mb-0-5);
+}
